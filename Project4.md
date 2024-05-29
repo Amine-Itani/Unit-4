@@ -10,3 +10,5 @@
 ### Techinques Used
 - Sessions
 - Database Interaction
+
+## Database Searching Follow Filter
