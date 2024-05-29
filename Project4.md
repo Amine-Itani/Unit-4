@@ -12,3 +12,4 @@
 - Database Interaction
 
 ## Database Searching Follow Filter
+My client required a way to only view posts made by users they follow in their profile. To do this, I am joining multiple tables upon each other to retrieve data 
