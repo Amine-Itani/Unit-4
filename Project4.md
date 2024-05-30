@@ -109,7 +109,7 @@ Another problem was the inability to display this in statics HTML. The follow bu
 
 # Criteria E: Evaluation
 
-A form was conducted on 
+A blackbox test was conducted with the help of two, non-compter scietist individuals. With the only given instruction being an explanation on the prupose of the program " It is for a mathematics forum that allows students to work with each other online.", they filled out a form with the pros and cons they faced when using the webapp.
 
 # Appendix
 <sup>1</sup>https://www.infosecinstitute.com/resources/general-security/cookies-an-overview-of-associated-privacy-and-security-risks/#:~:text=Yet%2C%20depending%20on%20how%20cookies,user%20and%20gain%20unauthorized%20access.
