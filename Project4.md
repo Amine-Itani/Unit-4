@@ -109,7 +109,25 @@ Another problem was the inability to display this in statics HTML. The follow bu
 
 # Criteria E: Evaluation
 
-A blackbox test was conducted with the help of two, non-compter scietist individuals. With the only given instruction being an explanation on the prupose of the program " It is for a mathematics forum that allows students to work with each other online.", they filled out a form with the pros and cons they faced when using the webapp.
+A blackbox test was conducted with the help of two, non-compter scietist individuals. With the only given instruction being an explanation on the prupose of the program " It is for a mathematics forum that allows students to work with each other online.", they filled out a form with the pros and cons they faced when using the webapp which can be found in the appendix.<sup>6</sup>
+
+## Meeting Success Criteria
+
+|                    **Success Criteria**                   | **Met?** |                                        **Description**                                       |
+|:---------------------------------------------------------:|:--------:|:--------------------------------------------------------------------------------------------:|
+|            Hashed login and registration system           |    YES   |   Registration system is easy to use and secure thanks to hashing and password confirmation  |
+|            Posting system to EDIT/CREATE/DELETE           |    YES   |                        Comments work well and so does posting system                         |
+|                 System to add/remove likes                |    YES   |        Likes system works thanks to counter and inability to like the same post twice        |
+| A system to follow/unfollow users, follow/unfollow topics |    YES   | Webapp allows following and unfollowing users, and redirects their posts to the profile page |
+|           Profile page with relevant information          |    YES   |     Is functional and the content is that which is followed which is relevant information    |
+|                       Upload Images                       |    YES   |               Upload images is possible both for posts and for profile pictures              |
+|                        Send emails                        |    YES   |                        Reaching out to users is possible and adequate                        |
+
+## Extensibility
+
+The testers highlighted a few potential improvements in the future of the webapp:
+- For quality of life, the description and profile picture of the user can be displayed in their profile. This is an easy fix via some Jinja2 additions in the HTML template
+- The follow/unfollow button starts as unfollow although the defualt is unfollow, display does not match on first click only, and that can be improved. This could be possible through a refining of the if statements in HTML through Jinja linked to the display of the button.
 
 # Appendix
 <sup>1</sup>https://www.infosecinstitute.com/resources/general-security/cookies-an-overview-of-associated-privacy-and-security-risks/#:~:text=Yet%2C%20depending%20on%20how%20cookies,user%20and%20gain%20unauthorized%20access.
@@ -117,3 +135,4 @@ A blackbox test was conducted with the help of two, non-compter scietist individ
 <sup>3</sup>https://www.dbvis.com/thetable/parameterized-queries-in-sql-a-guide/#:~:text=Parameterized%20queries%20in%20SQL%20are,attacks%20unfeasible%20for%20the%20attacker.
 <sup>4</sup>https://mode.com/sql-tutorial/sql-sub-queries 
 <sup>5</sup> Jinja2
+<sup>6</sup> https://docs.google.com/document/d/1rS3_d1NuW42JYIMBdETM351HhKtvDIikywUYfc-6pJI/edit?usp=sharing
