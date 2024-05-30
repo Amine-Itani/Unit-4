@@ -2,16 +2,22 @@
 # Criteria C
 ## List of techniques used
 ### Techinques Used
-- Sessions
+- Server-side Sessions
 - Parameterized Queries
 - Subqueries
 - Dynamic HTML (Jinja2)
+- Object Oriented Programming: Abstraction
+- Programming Paradigm: DRY (Don't repeat yourself)
+- If statements
+- For loops
+- Try/except troubleshooting
+- In-line CSS
 
 ## Login system: Tracking user information
 
-My client requires a login system for the webapp allowing different users to have unique profile pages and post unque comments. Initially, I used cookies to store a user log in, but through my research about cookies and testing it in browser, I found out that cookies are not a secure way of storing user information because they are stored on the client end.<sup>1</sup>
+My client requires a login system allowing different users to have profile pages and post comments. Initially, I used cookies to store a user log in, but through my research about cookies and testing it in browser, I realized that cookies are not a secure way of storing user information because they are stored on the client end.<sup>1</sup>
 
-Instead, I decided to use sessions which are safer according to my research<sup>2</sup> and stored on the server side .
+Instead, I decided to use sessions which are safer according to my research<sup>2</sup> because they are stored on the server side .
 
 
 ``` ['current_user_id'] = db.search(query=f"Select id from users where username='{username}'", multiple=False)```
@@ -33,7 +39,7 @@ class DatabaseBridge:
     # more functions defined below
 ```
 
-I decided to use parametirized queries because they protect my client and their users from injection attacks since the variable being inserted is kept seperate from the SQL query and cannot be manipulated. With parameterized queries I also improve the performance of the code because the database can compile the query once and then execute it multiple times with different paramters. I used object oriented-programming to apply this to every query by defining the function to run queries in a class and using it on any other query later. This is an example of the DRY (don't repeat yourself) paradigm.
+I decided to use parametirized queries because they protect users from injection attacks since the variable being inserted is kept seperate from the SQL query and cannot be manipulated. I also improve the performance of the code because the database can compile the query once and then execute it multiple times with different paramters. I used object oriented-programming to apply this to every query by defining the function to run queries in a class and using it on any other query later. This is an example of the DRY (don't repeat yourself) paradigm.
 
 ## Database Searching Follow Filter
 
@@ -49,7 +55,7 @@ posts_2 = db.search("SELECT posts.*, users.username, users.image, users.email, t
 
 ```
 
-Firstly, I identified the data needed for a post. That is the information about the post, the username, image, and email of the post author and the color of the topic the post is under: ```"SELECT posts.*, users.username, users.image, users.email, topics.color "```. To get the correct information about the post author, I **join** the user_id column of the posts table **on** the id column of the users table ```"FROM posts JOIN users ON posts.user_id = users.id"```. I did the same for the topics color, **joining** the topic column in the posts table **on** the topics in the topic table, giving its color on the same row ```"JOIN topics ON posts.topic = topics.topic"```. 
+Firstly, I identified the data needed for posts that being the post, the username, image, and email of the post author and the color of its topic: ```"SELECT posts.*, users.username, users.image, users.email, topics.color "```. To get the correct information about the post author, I **join** the user_id column of the posts table **on** the id column of the users table ```"FROM posts JOIN users ON posts.user_id = users.id"```. I did the same for the topics color, **joining** the topic column in the posts table **on** the topics in the topic table, giving its color on the same row ```"JOIN topics ON posts.topic = topics.topic"```. 
 
 Secondly, to filter the table, I checked that the post author is not followed by the current user. From the follows table, I only want to receive users that the current user follows (I know who the user is through sessions explained above.) ```"WHERE follows.user_id = ?", params=(current_user_id)```. Then I checked that the post author is a user that the current user follows by matching their ids together ```"and posts.user_id = follows.following"```. I also have a subquery filter<sup>4</sup> ```follows.following IN "(SELECT following FROM follows WHERE user_id = ?)``` pull all users that the current user follows, and the main query that checks if the users that could be followed are specifically **in** the users provided by the subquery. This may seem unecessary, but I saw through testing that it is important because the follows table includes both users the current user follows and is being followed by, but this search should only inlude posts by the former.
 
@@ -57,7 +63,7 @@ Secondly, to filter the table, I checked that the post author is not followed by
 
 My client required a system allowing users to follow each other on the webapp so they can later get posts from their following. To do that, I implemented a follow button that saves follow links in the follows table. The button would be found on a post, so clicking it would mean following the post author. This is convenient as when users realize they are interested in another users posts, they can instantly follow them.
 
-A problem I faced is when creating this button in cases where the current user already follows the post author, the webapp showed a follow button instead of an unfollow. Firstly, I tried switching the button functionality depending on the results of the database filter search shown above, but that did not work because the buttons on other posts by the same author did not change when the user followed them, and the data on following information was queried once on loading the page.
+A problem I faced is creating this button in cases where the current user already follows the post author, the webapp showed a follow button instead of an unfollow. Firstly, I tried switching the button functionality depending on the results of the database filter search shown above, but that did not work because the buttons on other posts by the same author did not change when the user followed them, and the data on following information was queried once on loading the page.
 
 Instead, I added a following state column in the posts table. This column is decided once on get by comparing to the query from the earlier explanation and **updated** everytime the follow button is pressed ```db.run_query(f"UPDATE posts SET following_state = 'Following' WHERE id = ?", (post_id,))```. This solution uses many if statements, to link to the specific button and to determine whether to set states to following or not ex: (```if following_state == 'Not_following':```). It reloads the page everytime to show results, and affects the follows table ```db.run_query(f"DELETE FROM follows WHERE user_id = ? AND following = ?", (current_user_id, post_id))```
 
