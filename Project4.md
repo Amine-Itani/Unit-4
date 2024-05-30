@@ -9,7 +9,7 @@
 
 ## Login system: Tracking user information
 
-My client requires a login system for the webapp so that different users can have unique profile pages and post comments. Initially, I used cookies as a way of storing when a user is logged in, but through my research about cookies and testing it in browser, I found out that the cookie is not a secure way of storing user information because they are stored on the client end.<sup>1</sup>
+My client requires a login system for the webapp allowing different users to have unique profile pages and post unque comments. Initially, I used cookies to store a user log in, but through my research about cookies and testing it in browser, I found out that cookies are not a secure way of storing user information because they are stored on the client end.<sup>1</sup>
 
 Instead, I decided to use sessions which are safer according to my research<sup>2</sup> and stored on the server side instead.
 
