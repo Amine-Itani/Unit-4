@@ -65,9 +65,9 @@ Another issue I found was when the post author was the user currently using the 
 
 ```.py
 posts_2 = db.search("SELECT posts.*, users.username, users.image, users.email, topics.color FROM posts JOIN users ON posts.user_id = users.id JOIN topics ON posts.topic = topics.topic JOIN follows ON posts.user_id = follows.following WHERE follows.user_id = ? and posts.user_id = follows.following ORDER BY date DESC", multiple=True, params=(user_id,))
-    for p in posts_2:
+    for p in posts:
         db.run_query(f"UPDATE posts SET myself = ?", (False,))
-    for p in posts_2:
+    for p in posts:
         db.run_query(f"update posts set myself = TRUE where user_id = ?", (current_user_id,))
         if does_user_follow(current_user_id, int(p[1])):
             db.run_query(f"update posts set following_state = 'Unfollow' where user_id = ?", (current_user_id,))
