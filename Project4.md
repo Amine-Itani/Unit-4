@@ -121,6 +121,10 @@ https://drive.google.com/drive/folders/1qWRrioOV3q5zWRDajPETrpvH3EZE-v_o?usp=dri
 
 Due to storage, editing, and organizational reasons, the video had to be split in two.
 
+https://drive.google.com/drive/folders/1lw2t1D6YcUxSXDQh0pxaDxSSE25b_tYS?usp=sharing
+
+<sub>Fig.2 A 25 second video demonstrating the ease another programmer would have expanding this project due to good coding practices</sub>
+
 # Criteria E: Evaluation
 
 A blackbox test was conducted with the help of two, non-compter scietist individuals. With the only given instruction being an explanation on the prupose of the program " It is for a mathematics forum that allows students to work with each other online.", they filled out a form with the pros and cons they faced when using the webapp which can be found in the appendix.<sup>6</sup>
