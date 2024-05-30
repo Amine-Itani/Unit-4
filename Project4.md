@@ -1,5 +1,5 @@
 # Forum development: Unit 4 Project
-# Criteria C
+# Criteria C: Development
 ## List of techniques used
 ### Techinques Used
 - Server-side Sessions
@@ -114,7 +114,7 @@ Another problem was the inability to display this in statics HTML. The follow bu
 {% endfor %}
 ```
 
-# Criteria D: Video
+# Criteria D: Functionality and Extensibility
 
 https://drive.google.com/drive/folders/1qWRrioOV3q5zWRDajPETrpvH3EZE-v_o?usp=drive_link 
 
