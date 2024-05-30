@@ -137,8 +137,13 @@ The testers highlighted a few potential improvements in the future of the webapp
 
 # Appendix
 <sup>1</sup>https://www.infosecinstitute.com/resources/general-security/cookies-an-overview-of-associated-privacy-and-security-risks/#:~:text=Yet%2C%20depending%20on%20how%20cookies,user%20and%20gain%20unauthorized%20access.
+
 <sup>2</sup>https://medium.com/@hendelRamzy/how-session-and-cookies-works-640fb3f349d1
+
 <sup>3</sup>https://www.dbvis.com/thetable/parameterized-queries-in-sql-a-guide/#:~:text=Parameterized%20queries%20in%20SQL%20are,attacks%20unfeasible%20for%20the%20attacker.
+
 <sup>4</sup>https://mode.com/sql-tutorial/sql-sub-queries 
+
 <sup>5</sup> Jinja2
+
 <sup>6</sup> https://docs.google.com/document/d/1rS3_d1NuW42JYIMBdETM351HhKtvDIikywUYfc-6pJI/edit?usp=sharing
