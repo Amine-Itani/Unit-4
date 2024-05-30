@@ -16,6 +16,8 @@ Not token-based, not cookies, but sessions. How? And why?
 
 ### Database Bridge
 
+My client required a system that could save data permanenetly to be used later (posts, username and password...). 
+
 Abstraction and parameterized queries.
 
 ## Database Searching Follow Filter
