@@ -149,14 +149,17 @@ The testers highlighted a few potential improvements in the future of the webapp
 - The follow/unfollow button starts as unfollow although the defualt is unfollow, display does not match on first click only, and that can be improved. This could be possible through a refining of the if statements in HTML through Jinja linked to the display of the button.
 
 # Appendix
-<sup>1</sup>https://www.infosecinstitute.com/resources/general-security/cookies-an-overview-of-associated-privacy-and-security-risks/#:~:text=Yet%2C%20depending%20on%20how%20cookies,user%20and%20gain%20unauthorized%20access.
 
-<sup>2</sup>https://medium.com/@hendelRamzy/how-session-and-cookies-works-640fb3f349d1
+## MLA9 Citation Format
 
-<sup>3</sup>https://www.dbvis.com/thetable/parameterized-queries-in-sql-a-guide/#:~:text=Parameterized%20queries%20in%20SQL%20are,attacks%20unfeasible%20for%20the%20attacker.
+<sup>1</sup>Dodt, Claudio. “Cookies: An Overview of Associated Privacy and Security Risks.” Infosec, 7 July 2020, <sub>www.infosecinstitute.com/resources/general-security/cookies-an-overview-of-associated-privacy-and-security-risks/#:~:text=Yet%2C%20depending%20on%20how%20cookies,user%20and%20gain%20unauthorized%20access. </sub>
 
-<sup>4</sup>https://mode.com/sql-tutorial/sql-sub-queries 
+<sup>2</sup>Ramzy, HENDEL. “How Session and Cookies Works ?” Medium, Medium, 16 Jan. 2024, <sub>medium.com/@hendelRamzy/how-session-and-cookies-works-640fb3f349d1. </sub>
 
-<sup>5</sup> Jinja2
+<sup>3</sup>Vileikis, Lukas. “Parameterized Queries in SQL – A Guide.” DbVisualizer, DbVis Software AB, 5 Apr. 2024, <sub>www.dbvis.com/thetable/parameterized-queries-in-sql-a-guide/#:~:text=Parameterized%20queries%20in%20SQL%20are,attacks%20unfeasible%20for%20the%20attacker. </sub>
 
-<sup>6</sup> https://docs.google.com/document/d/1rS3_d1NuW42JYIMBdETM351HhKtvDIikywUYfc-6pJI/edit?usp=sharing
+<sup>4</sup>SQL, Mode. “Writing Subqueries in SQL: Advanced SQL - Mode.” Mode Resources, 23 May 2016, <sub>mode.com/sql-tutorial/sql-sub-queries. </sub>
+
+<sup>5</sup>Ronacher, Armin. “Jinja¶.” Jinja, 5 May 2024, <sub>jinja.palletsprojects.com/en/3.1.x/. </sub>
+
+<sup>6</sup>Primary Source: <sub>Evalutation form transcript: https://docs.google.com/document/d/1rS3_d1NuW42JYIMBdETM351HhKtvDIikywUYfc-6pJI/edit?usp=sharing</sub>
