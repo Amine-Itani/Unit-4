@@ -9,6 +9,7 @@
 - Object Oriented Programming: Abstraction
 - Programming Paradigm: DRY (Don't repeat yourself)
 - If statements
+- Password Validation
 - For loops
 - Try/except troubleshooting
 - In-line CSS
