@@ -113,6 +113,14 @@ Another problem was the inability to display this in statics HTML. The follow bu
 {% endfor %}
 ```
 
+# Criteria D: Video
+
+https://drive.google.com/drive/folders/1qWRrioOV3q5zWRDajPETrpvH3EZE-v_o?usp=drive_link 
+
+<sub>Fig.1 A 3 minute 39 second video demonstrating the functionalities of the webapp</sub>
+
+Due to storage, editing, and organizational reasons, the video had to be split in two.
+
 # Criteria E: Evaluation
 
 A blackbox test was conducted with the help of two, non-compter scietist individuals. With the only given instruction being an explanation on the prupose of the program " It is for a mathematics forum that allows students to work with each other online.", they filled out a form with the pros and cons they faced when using the webapp which can be found in the appendix.<sup>6</sup>
