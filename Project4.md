@@ -12,13 +12,15 @@
 - Database Interaction
 
 ### Tracking user information
+
+
 Not token-based, not cookies, but sessions. How? And why?
 
 ### Database Bridge
 
 My client required a system that could save data permanenetly to be used later (posts, username and password...). To do this, I decided to use sqlite because it is scalable as the client expands the amount of users on the forum and it has quick querying time when compared to other programming langugages used for database management (ex: Mongodb). It is also has built-in security features I will cover later.
 
-To access sql queries in the most time-efficient manner for the benefit of the user, I chose to define a Database Bridge class in another file and import its functions to use on the forum database. This is a form of object oriendted programming and abstraction, which is beneficial because it keeps functions for interacting with the database consistent, meaning the user faces less errors in the website in the long-run.
+To access sql queries in the most time-efficient manner for the benefit of the user, I chose to define a Database Bridge class in another file and import its functions to use on the forum database. This is a form of object oriented programming and abstraction, which is beneficial because it keeps functions for interacting with the database consistent, meaning the user faces less errors in the website in the long-run. It is an example of the DRY (don't repeat yourself) coding paradigm.
 
 ```
 class DatabaseBridge:
