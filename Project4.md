@@ -11,10 +11,11 @@
 - Sessions
 - Database Interaction
 
-### Tracking user information
+### Login system: Tracking user information
+
+My client requires a login system for the website so that different users can have unique profile pages and post comments. Initially, I used cookies as a way of storing when a user is logged in, but through my research about cookies and testing it in browser, I found out that the cookie is not a secure way of storing user information.
 
 
-Not token-based, not cookies, but sessions. How? And why?
 
 ### Database Bridge
 
