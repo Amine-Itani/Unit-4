@@ -19,7 +19,7 @@ Not token-based, not cookies, but sessions. How? And why?
 Abstraction and parameterized queries.
 
 ## Database Searching Follow Filter
-My client required a way to only view posts made by users they follow in their profile. To do this, I am joining multiple tables upon each other to retrieve different data depending on the multiple factors.
+My client required a way to only view posts made by users they follow in their profile. To do this, I am joining multiple tables upon each other to retrieve different data depending on the multiple factors. This demonstrates my ability to think ahead as I identify what inputs and outputs are needed for the posts function, and my recursive thinking and decomposition skills as I break the problem down into smaller, more repetitive parts (select, join, filter).
 
 ```.py
 posts_2 = db.search("SELECT posts.*, users.username, users.image, users.email, topics.color "
@@ -29,7 +29,7 @@ posts_2 = db.search("SELECT posts.*, users.username, users.image, users.email, t
 
 ```
 
-Although I could have chose to use one database and avoid this joining, there are many disadvantages to using only one table including poor data organization, poor performance as the size of the table increases, and anomalies as redundancy replace important data during insertions.
+Although I could have chosen to use one database and avoid this joining, there are many disadvantages to using only one table including poor data organization, poor performance as the size of the table increases, and anomalies as redundancy replace important data during insertions.
 
 Firstly, it is important to recognize what data is needed for the post. That is all the information about the post, as well as the username, image, and email of the post author and the color of the topic the post is under: ```"SELECT posts.*, users.username, users.image, users.email, topics.color "```. In order to get the correct information about the post_author, we **join** the user_id column of the posts table **on** the id column of the users table ```"FROM posts JOIN users ON posts.user_id = users.id"```. We do the same for the topics color, **joining** the topic column in the posts table **on** the topics in the topic tabble, therefore giving its color on the same row ```"JOIN topics ON posts.topic = topics.topic"```. 
 
