@@ -16,7 +16,25 @@ Not token-based, not cookies, but sessions. How? And why?
 
 ### Database Bridge
 
-My client required a system that could save data permanenetly to be used later (posts, username and password...). 
+My client required a system that could save data permanenetly to be used later (posts, username and password...). To do this, I decided to use sqlite because it is scalable as the client expands the amount of users on the forum and it has quick querying time when compared to other programming langugages used for database management (ex: mongodb). It is also has built-in security features I will cover later.
+
+To access sql queries in the most time-efficient manner for the benefit of the user, I chose to define a Database Bridge class in another file and import its functions to use on the forum database. This is a form of object oriendted programming and abstraction, which is beneficial because it keeps functions for interacting with the database consistent, meaning the user faces less errors in the long-run.
+
+```
+class DatabaseBridge:
+    def __init__(self,name):
+        self.db_name = name
+        self.connect = sqlite3.connect(self.db_name)
+        self.cursor = self.connect.cursor()
+
+    def run_query(self, query:str, params=None):
+        self.cursor.execute(query, params)
+        self.connect.commit()
+        
+    # more functions defined below
+```
+First, the constructor method ```def __init__(self,name):``` is used to create to the database ```name``` and creates a cursor to execute commends. Beyond that, functions such as the run_query function take in self
+
 
 Abstraction and parameterized queries.
 
