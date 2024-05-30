@@ -107,6 +107,8 @@ Another problem was the inability to display this in statics HTML. The follow bu
 {% endfor %}
 ```
 
+# Criteria E: Evaluation
+
 # Appendix
 <sup>1</sup>https://www.infosecinstitute.com/resources/general-security/cookies-an-overview-of-associated-privacy-and-security-risks/#:~:text=Yet%2C%20depending%20on%20how%20cookies,user%20and%20gain%20unauthorized%20access.
 <sup>2</sup>https://medium.com/@hendelRamzy/how-session-and-cookies-works-640fb3f349d1
